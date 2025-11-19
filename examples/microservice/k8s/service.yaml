@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reliability-microservice
+  labels:
+    app: reliability-microservice
+spec:
+  type: ClusterIP
+  selector:
+    app: reliability-microservice
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8000
